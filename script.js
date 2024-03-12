@@ -1,16 +1,6 @@
-$(document).ready(function() {
-    $('#task-form').submit(function(event) {
-        event.preventDefault();
-        var taskName = $('#task-input').val();
-        if (taskName.trim() !== '') {
-            var listItem = $('<li>').text(taskName);
-            $('#task-list').append(listItem);
-            $('#task-input').val('');
-        }
-    });
-
-    $('#task-list').on('click', 'li', function() {
-        $(this).toggleClass('completed');
-    });
-    
-});
+$(document).ready(function(){
+    $('#cpf').mask('000.000.000-00', {reverse: true});
+    $('#telefone').mask('(00) 0000-00009');
+    $('#cep').mask('00000-000');
+  });
+  
